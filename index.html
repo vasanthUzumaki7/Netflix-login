@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <script src="https://kit.fontawesome.com/dfa96836c3.js" crossorigin="anonymous"></script>
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+nav img{
+    width: 10.0rem;
+    height: 8.0rem;
+
+    opacity: 1.0;
+}
+nav select{
+    width: 6.0rem;
+    height: 2.0rem;
+    text-align: center;
+    background: transparent;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(163, 161, 161);
+    
+}
+nav button{
+    width: 6.0rem;
+    height: 2.0rem;
+    text-align: center;
+    justify-self: right;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(163, 161, 161);
+    background-color: brown;
+    color: white;
+    margin-left: 10px;
+    
+}
+.nav-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+.nav-content h1{
+    font-size: 50px;
+    color: white;
+    margin-bottom: 10px;
+    text-wrap: wrap;
+    text-align: center;
+}
+.nav-content h2{
+    color: white;
+    margin-bottom: 10px;
+    text-wrap: wrap;
+    text-align: center;
+}
+.nav-box{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0), transparent), url('https://assets.nflxext.com/ffe/siteui/vlv3/c1366fb4-3292-4428-9639-b73f25539794/3417bf9a-0323-4480-84ee-e1cb2ff0966b/IN-en-20240408-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+    background-position: bottom;
+    border-bottom: 5px solid rgb(83, 82, 82);
+}
+.nav-content div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+.nav-content div input{
+    width: 16.0rem;
+    height: 2.5rem;
+    background:rgb(16, 17, 18) ;
+    border: none;
+    box-shadow: 0 0 5px rgb(163, 161, 161);
+    padding-left: 10px;
+    border-radius: 5px;
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.nav-content div button{
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 10.0rem;
+    height:2.5rem ;
+    background: brown;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.content-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    border-bottom: 5px solid rgb(83, 82, 82);
+} 
+.content-1 div h1{
+    font-size: 3.7rem;
+    color: white;
+    width: 30.0rem;
+    
+}
+.content-1 div h2{
+    color: white;
+    width: 30.0rem;
+}
+
+.content-1 video{
+    width: 30.0rem;
+
+}
+
+
+.question1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    color: white;
+    background: rgb(46, 46, 46);
+}
+.question1:hover{
+    background:rgb(100, 100, 100) ;
+}
+.questions h1{
+    color: white;
+    font-size: 3.7rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.questions h2,i{
+    font-size: 2.0rem;
+}
+.questions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    flex-direction: column;
+    padding: 20px 0px 20px 0px;
+}
+
+.questions div{
+    text-align: center;
+}
+
+.questions div input{
+    width: 16.0rem;
+    height: 2.5rem;
+    background:rgb(16, 17, 18) ;
+    border: none;
+    box-shadow: 0 0 5px rgb(163, 161, 161);
+    padding-left: 10px;
+    border-radius: 5px;
+    color: white;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.questions div button{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 10.0rem;
+    height:2.5rem ;
+    background: brown;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.footer{
+    width: 80%;
+    margin: auto;
+    background: black;
+    padding: 30px 0px 30px 0px;
+}
+.footer td select{
+    width: 6.0rem;
+    height: 2.0rem;
+    text-align: center;
+    background: transparent;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(163, 161, 161);
+}
+.footer td{
+    border: 1px solid black;
+    color: rgb(179, 179, 179);
+    padding: 5px 0px 0px 5px;
+}
+.footerdiv{
+    background-color: black;
+}
+@media screen and (max-width: 1000px) {
+    .nav-content h1 {
+        font-size: 30px;
+    }
+    .content-1 div h1 {
+        font-size: 2.7rem;
+        color: white;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .content-1 div h2 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .content-1 video {
+        width: 30.0rem;
+        
+    }
+}
+@media screen and (max-width: 500px){
+  
+    .content-1 video {
+        width: 20.0rem;
+        
+    }
+    .content-1{
+        height: 30.0rem;
+   
+    }
+    .nav-content{
+        height: 30.0rem;
+    }
+
+    .footer td {
+        white-space: normal; /* Allow text to wrap */
+        display: block; /* Display cells as block elements */
+      }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="nav-box">
+        <header>
+            <nav>
+                <img src="https://cdn.iconscout.com/icon/free/png-512/free-netflix-282224.png?f=webp&w=256" alt="">
+                <div>
+                <select name="language" id="language">
+                    <option value="English">English</option>
+                    <option value="German">German</option>
+                </select>
+                <button>Sign In</button>
+                </div>
+            </nav>
+
+            <div class="nav-content">
+                <h1>Unlimited movies, TV shows and more</h1>
+                <h2>Watch anywhere. Cancel anytime.</h2>
+                <h2>Ready to watch? Enter your email to create or restart your membership.</h2>
+                <div>
+                    <input type="search" name="" id="" placeholder="Email Address">
+                    <button>Get Started</button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+  
+        <div class="content-1">
+            <div>
+                <h1>Enjoy on your TV</h1>
+                <h2>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</h2>
+            </div>
+            <video autoplay muted loop >
+                <source src="./videos/netflix.mp4" type="video/mp4">
+               </video> 
+            
+        </div>
+
+        <div class="content-1">
+            
+            <video autoplay muted loop >
+                <source src="./videos/download.mp4" type="video/mp4">
+               </video> 
+               <div>
+                <h1>Download your shows </h1>
+                <h2>always have something to watch.</h2>
+            </div>
+        </div>
+
+        <div class="content-1">
+            <div>
+                <h1>Watch everywhere</h1>
+                <h2>Stream unlimited movies and TV shows. </h2>
+            </div>
+            <video autoplay muted loop >
+                <source src="./videos/person.mp4" type="video/mp4">
+               </video> 
+            
+        </div>
+
+        <div class="content-1">
+            
+            <video autoplay muted loop >
+                <source src="./videos/kids.mp4" type="video/mp4">
+               </video> 
+               <div>
+                <h1>Create profiles for kids</h1>
+                <h2>Send children on adventures with their favourite characters.</h2>
+            </div>
+            
+        </div>
+
+        
+       <div class="questions">
+        <h1>Frequently Asked Questions</h1>
+        <div class="question1">
+                <h2>What is Netflix</h2>
+                <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="question1">
+            <h2>How much does Netflix cost?</h2>
+            <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="question1">
+            <h2>Where can I watch?</h2>
+            <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="question1">
+            <h2>How do I cancel?</h2>
+            <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="question1">
+            <h2>What can I watch on Netflix? </h2>
+            <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="question1">
+            <h2>Is Netflix good for kids?</h2>
+            <i class="fa-solid fa-plus"></i>
+        </div>
+        
+            <h2 style="color: white;text-align: center;">Ready to watch? Enter your email to create or restart your membership.</h2>
+            <div>
+                <input type="search" name="" id="" placeholder="Email Address">
+                <button>Get Started</button>
+            </div>
+       </div>
+        
+       <div class="footerdiv">
+       <table class="footer">
+        <tr>
+            <td>Questions? Call 000-800-919-1694</td>
+        </tr>
+        <tr>
+            <td>FAQ</td>
+            <td>Help Centre</td>
+            <td>Account</td>
+            <td>Media Centre</td>
+        </tr>
+        <tr>
+            <td>Investor Relations</td>
+            <td>Jobs</td>
+            <td> Ways to Watch</td>
+            <td>Terms of Use</td>
+        </tr>
+        <tr>
+            <td>Privacy</td>
+            <td>Cookie Preferences</td>
+            <td>Corporate Information</td>
+            <td>Contact Us</td>
+        </tr>
+        <tr>
+            <td>Speed Test</td>
+            <td>Legal Notices</td>
+            <td>Only on Netflix</td>
+        </tr>
+        <tr>
+            <td>
+                <select name="language" id="language">
+                <option value="English">English</option>
+                <option value="German">German</option>
+                </select>
+        </td>
+        </tr>
+        <tr>
+            <td>Netflix India</td>
+        </tr>
+       </table>
+    </div>
+</body>
+</html>
+
